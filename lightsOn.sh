@@ -43,7 +43,7 @@
 # DEBUG=0 for no output
 # DEBUG=1 for sleep prints
 # DEBUG=2 for everything
-DEBUG=0
+DEBUG=2
 
 # this is actually the minimum allowed dynamic delay.
 # Also the default (if everything else fails)
@@ -80,7 +80,7 @@ delay_progs=()
 # Display outputs to check, display screensaver when they are connected.
 # Run xrandr to show current monitor config.
 output_detection_control=0
-output_detection=('HDMI-0')
+output_detection=('HDMI-0' 'eDP1' 'HDMI1' 'HDMI2')
 
 # DPMS settings in seconds, 600 seconds = 10 minutes.
 # If you don't want to change DMPS settings, modify DPMS_Control to 0.
@@ -92,7 +92,7 @@ DPMS_OffTime=600
 # X11 Screen Saver Extension settings in seconds, 600 seconds = 10 minutes.
 # If you don't want to change these settings, modify X11ScreenSaver_Control to 0.
 X11ScreenSaver_Control=1
-X11ScreenSaver_Timeout=600
+X11ScreenSaver_Timeout=300
 
 # YOU SHOULD NOT NEED TO MODIFY ANYTHING BELOW THIS LINE
 gsettings_present=$(if [ -x $(which gsettings) ]; then echo 1; else echo 0; fi)
